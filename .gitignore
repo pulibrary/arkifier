@@ -1,0 +1,24 @@
+# Compiled source #
+###################
+*.class
+target
+
+# Eclipse stuff #
+#################
+# .project
+# .classpath
+.settings
+
+
+# Packages #
+############
+*.gz
+*.jar
+*.tar
+*.zip
+
+# Logs and databases #
+######################
+*.log
+
+

@@ -1,0 +1,10 @@
+To build:
+1. Configure ./src/main/resources/arkifier.properties
+2. From this directory (arkifier/) issue "mvn package"
+3. Copy ./target/arkifier-dist.tar.gz to wherever you'd like and unpack 
+(tar xzvf arkifier-dist.tar.gz)
+
+To use:
+From wherever you unpacked the distribution, call the shell script 
+(./arkify.sh) without any arguments or options to view help.
+
