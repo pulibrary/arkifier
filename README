@@ -1,10 +1,13 @@
 To build:
 1. Check out the latest TAG from SVN. 
-2. Confirm configuration in ./src/main/resources/arkifier.properties - make 
+2. Confirm configuration in ./src/main/resources/arkifier.properties. Make 
    sure you're pointing at the production ARK service 
 3. From this directory (arkifier/) issue "mvn package"
 4. Copy ./target/arkifier-dist.tar.gz to wherever you'd like and unpack 
 (tar xzvf arkifier-dist.tar.gz)
+5. Make sure your machine can interact with the ARK service without having to 
+   go through CAS. To do this you need to update the Apache configs with your 
+   machine's IP.
 
 To use:
 From wherever you unpacked the distribution, call the shell script 
@@ -23,4 +26,4 @@ instance. When ready for a release:
 5. Increment the version and reappend "-SNAPSHOT" in the pom
 6. Check back in on the trunk.
 
-Comments should reflect these steps.
+Comments should reflect these steps and corrresponding tags, revisions, etc.
