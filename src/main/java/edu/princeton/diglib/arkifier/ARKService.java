@@ -23,10 +23,6 @@ public class ARKService {
     private String uri;
     private String naan;
 
-    public static void main(String[] args) {
-        System.out.println(new ARKService("http://arks.princeton.edu/nd/noidu_scratch", "88435").mint());
-    };
-    
     public ARKService(String uri, String naan) {
         this.uri = uri;
         this.naan = naan;

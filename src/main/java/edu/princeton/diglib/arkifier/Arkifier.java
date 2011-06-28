@@ -48,19 +48,6 @@ public class Arkifier {
 
     private final static Logger logger = (Logger) LoggerFactory.getLogger(Arkifier.class.getName());
 
-    // just for testing
-    public static void main(String[] args) {
-
-        Arkifier arkifier = new Arkifier();
-        arkifier.setSimulate(false);
-        arkifier.setMint(true);
-        arkifier.setBind(true);
-
-//        ClassLoader cl = Arkifier.class.getClassLoader();
-        String testDir = "/home/jstroop/workspace/arkifier/src/test/resources/testData";
-        arkifier.run(testDir);
-    };
-
     /**
      * @param dir
      */
@@ -73,7 +60,7 @@ public class Arkifier {
             propsStream = cl.getResourceAsStream("arkifier.properties");
             props.load(propsStream);
             uri = props.getProperty("Arkifier.uri");
-            naan = "ark:/" + props.getProperty("Arkifier.naan");
+            naan = props.getProperty("Arkifier.naan");
             pudlObjectUri = props.getProperty("Arkifier.pudlObjectUri");
             this.arkService = new ARKService(uri, naan);
         } catch (IOException e) {
