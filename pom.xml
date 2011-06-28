@@ -26,11 +26,6 @@
       </dependency>
       <dependency>
          <groupId>ch.qos.logback</groupId>
-         <artifactId>logback-core</artifactId>
-         <version>${logback-version}</version>
-      </dependency>
-      <dependency>
-         <groupId>ch.qos.logback</groupId>
          <artifactId>logback-classic</artifactId>
          <version>${logback-version}</version>
       </dependency>
@@ -38,11 +33,6 @@
          <groupId>org.slf4j</groupId>
          <artifactId>slf4j-api</artifactId>
          <version>${slf4j-api}</version>
-      </dependency>
-      <dependency>
-         <groupId>edu.princeton.diglib</groupId>
-         <artifactId>mets-api</artifactId>
-         <version>${mets-api-version}</version>
       </dependency>
       <dependency>
          <groupId>com.sun.jersey</groupId>
@@ -64,11 +54,11 @@
          <artifactId>xom</artifactId>
          <version>${xom-version}</version>
       </dependency>
-      	   <dependency>
-	      <groupId>dom4j</groupId>
-	      <artifactId>dom4j</artifactId>
-	      <version>1.6.1</version>
-	   </dependency>
+      <dependency>
+         <groupId>dom4j</groupId>
+         <artifactId>dom4j</artifactId>
+         <version>1.6.1</version>
+      </dependency>
    </dependencies>
    <build>
       <finalName>arkifier</finalName>
@@ -88,22 +78,18 @@
                <target>1.6</target>
             </configuration>
          </plugin>
-         <!--
-				For another day: @see
-				http://stackoverflow.com/questions/283477/how-do-i-assemble-a-console-application-with-maven-without-unpacking-all-dependen
-			-->
          <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-jar-plugin</artifactId>
             <version>2.3.1</version>
             <configuration>
                <archive>
-						<manifest>
-							<mainClass>edu.princeton.diglib.arkifier.CLI</mainClass>
-							<addClasspath>true</addClasspath>
-							<classpathPrefix>lib/</classpathPrefix>
-						</manifest>
-					</archive>
+                  <manifest>
+                     <mainClass>edu.princeton.diglib.arkifier.CLI</mainClass>
+                     <addClasspath>true</addClasspath>
+                     <classpathPrefix>lib/</classpathPrefix>
+                  </manifest>
+               </archive>
             </configuration>
          </plugin>
          <plugin>
