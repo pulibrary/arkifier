@@ -35,8 +35,8 @@ public class CLI {
     private static final String BIND_DESC = "[optional] bind ARKs for any " +
     		"newly minted or existng NOIDs to /Objects/{NOID}";
     private static final String SIM_DESC = "[optional] run the utility based " +
-    		"on the the options and arguments, logging what what would " +
-    		"happen, but do not mint or bind any NOIDs";
+    		"on the options and arguments, logging what what would happen, " +
+    		"but do not mint or bind any NOIDs";
     private static final String HELP_DESC = "print help";
 
     private static String version;
