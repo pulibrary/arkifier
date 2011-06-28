@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry including="**/*.java" kind="src" output="target/test-classes" path="src/test/java"/>
-	<classpathentry excluding="**/*.java" kind="src" output="target/test-classes" path="src/test/resources"/>
-	<classpathentry including="**/*.java" kind="src" path="src/main/java"/>
-	<classpathentry excluding="**/*.java" kind="src" path="src/main/resources"/>
-	<classpathentry kind="src" path="src/main/bin"/>
-	<classpathentry kind="src" path="src/assemble"/>
-	<classpathentry kind="var" path="M2_REPO/javax/xml/stream/stax-api/1.0-2/stax-api-1.0-2.jar"/>
-	<classpathentry kind="var" path="M2_REPO/commons-cli/commons-cli/1.2/commons-cli-1.2.jar"/>
-	<classpathentry kind="var" path="M2_REPO/com/sun/jersey/jersey-client/1.6-ea05/jersey-client-1.6-ea05.jar"/>
-	<classpathentry kind="var" path="M2_REPO/com/sun/jersey/jersey-core/1.6-ea05/jersey-core-1.6-ea05.jar"/>
-	<classpathentry kind="var" path="M2_REPO/junit/junit/4.8.2/junit-4.8.2.jar"/>
-	<classpathentry kind="var" path="M2_REPO/ch/qos/logback/logback-classic/0.9.28/logback-classic-0.9.29.jar"/>
-	<classpathentry kind="var" path="M2_REPO/org/slf4j/slf4j-api/1.6.1/slf4j-api-1.6.1.jar"/>
-	<classpathentry kind="var" path="M2_REPO/org/codehaus/woodstox/stax2-api/3.1.1/stax2-api-3.1.1.jar"/>
-	<classpathentry kind="var" path="M2_REPO/org/codehaus/woodstox/woodstox-core-lgpl/4.1.1/woodstox-core-lgpl-4.1.1.jar"/>
-	<classpathentry kind="var" path="M2_REPO/xom/xom/1.2.5/xom-1.2.5.jar"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="output" path="target/classes"/>
+   <classpathentry including="**/*.java" kind="src" output="target/test-classes" path="src/test/java"/>
+   <classpathentry excluding="**/*.java" kind="src" output="target/test-classes" path="src/test/resources"/>
+   <classpathentry including="**/*.java" kind="src" path="src/main/java"/>
+   <classpathentry excluding="**/*.java" kind="src" path="src/main/resources"/>
+   <classpathentry kind="src" path="src/main/bin"/>
+   <classpathentry kind="src" path="src/assemble"/>
+   <classpathentry kind="var" path="M2_REPO/javax/xml/stream/stax-api/1.0-2/stax-api-1.0-2.jar"/>
+   <classpathentry kind="var" path="M2_REPO/commons-cli/commons-cli/1.2/commons-cli-1.2.jar"/>
+   <classpathentry kind="var" path="M2_REPO/com/sun/jersey/jersey-client/1.6-ea05/jersey-client-1.6-ea05.jar"/>
+   <classpathentry kind="var" path="M2_REPO/com/sun/jersey/jersey-core/1.6-ea05/jersey-core-1.6-ea05.jar"/>
+   <classpathentry kind="var" path="M2_REPO/junit/junit/4.8.2/junit-4.8.2.jar"/>
+   <classpathentry kind="var" path="M2_REPO/ch/qos/logback/logback-classic/0.9.28/logback-classic-0.9.28.jar"/>
+   <classpathentry kind="var" path="M2_REPO/ch/qos/logback/logback-core/0.9.28/logback-core-0.9.28.jar"/>
+   <classpathentry kind="var" path="M2_REPO/edu/princeton/diglib/mets-api/0.0.7/mets-api-0.0.7.jar"/>
+   <classpathentry kind="var" path="M2_REPO/org/slf4j/slf4j-api/1.6.1/slf4j-api-1.6.1.jar"/>
+   <classpathentry kind="var" path="M2_REPO/org/codehaus/woodstox/stax2-api/3.1.1/stax2-api-3.1.1.jar"/>
+   <classpathentry kind="var" path="M2_REPO/org/codehaus/woodstox/woodstox-core-lgpl/4.1.1/woodstox-core-lgpl-4.1.1.jar"/>
+   <classpathentry kind="var" path="M2_REPO/xom/xom/1.2.5/xom-1.2.5.jar"/>
+   <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+   <classpathentry kind="output" path="target/classes"/>
 </classpath>
