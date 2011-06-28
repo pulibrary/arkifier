@@ -45,7 +45,7 @@ public class ARKService {
         }
         
         noid = body.split("/")[1].trim();
-        
+        mintResponse.close();
         return noid;
     }
 
@@ -56,7 +56,8 @@ public class ARKService {
         bindResponse = bindResource.accept("text/plain").get(ClientResponse.class);
 
         int status = bindResponse.getStatus();
-
+        bindResponse.close();
+        
         if (status != 200) {
             throw new HTTPException(status);
         } else
