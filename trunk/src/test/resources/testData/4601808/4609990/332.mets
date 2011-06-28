@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets:mets xmlns:xlink="http://www.w3.org/1999/xlink"
+           xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+           xmlns:mets="http://www.loc.gov/METS/"
+           xmlns:premis="info:lc/xmlns/premis-v2"
+           xmlns:dcterms="http://purl.org/dc/terms/"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd info:lc/xmlns/premis-v2 http://www.loc.gov/standards/premis/premis.xsd"
+           TYPE="DigitalObject"
+           OBJID="ff82a47c-9e6d-11e0-9cd7-001e4fb20deb">
+  <mets:metsHdr ADMID="this.mets.amd">
+     <mets:agent ROLE="CREATOR" TYPE="ORGANIZATION">
+        <mets:name>Princeton University Library, Digital Initiatives</mets:name>
+     </mets:agent>
+     <mets:altRecordID TYPE="pudl.record.uri">http://diglib.princeton.edu/mdata/pudl0001/4609990/332.mets</mets:altRecordID>
+  </mets:metsHdr>
+  <mets:dmdSec ID="object.labels">
+     <mets:mdWrap MDTYPE="DC">
+        <mets:xmlData>
+           <rdf:RDF>
+              <rdf:Description>
+                 <dcterms:title rdf:parseType="Resource">
+                    <rdf:value>Biblia Latina [fragments]</rdf:value>
+                    <dcterms:type>title proper</dcterms:type>
+                 </dcterms:title>
+              </rdf:Description>
+           </rdf:RDF>
+        </mets:xmlData>
+     </mets:mdWrap>
+  </mets:dmdSec>
+  <mets:dmdSec ID="object.dmd">
+     <mets:mdRef LOCTYPE="URL" MDTYPE="MODS"
+                  xlink:href="http://diglib.princeton.edu/mdata/pudl0001/4609990/332.mods"/>
+  </mets:dmdSec>
+  <mets:amdSec ID="this.mets.amd">
+     <mets:digiprovMD ID="this.mets.events">
+        <mets:mdWrap MDTYPE="PREMIS:EVENT">
+           <mets:xmlData>
+              <premis:event xmlID="tme-1">
+                 <premis:eventIdentifier>
+                    <premis:eventIdentifierType>URN</premis:eventIdentifierType>
+                    <premis:eventIdentifierValue>urn:uuid:5c981f68-f60f-43eb-9449-e65e3f6c2ef6</premis:eventIdentifierValue>
+                 </premis:eventIdentifier>
+                 <premis:eventType>INITIAL_METS_CREATION</premis:eventType>
+                 <premis:eventDateTime>2009-08-06T16:25:21</premis:eventDateTime>
+                 <premis:eventDetail>Creation of this METS/PREMIS record</premis:eventDetail>
+              </premis:event>
+           </mets:xmlData>
+        </mets:mdWrap>
+     </mets:digiprovMD>
+  </mets:amdSec>
+  <mets:fileSec>
+     <mets:fileGrp ID="icon">
+        <mets:file ID="im1" USE="master" MIMETYPE="image/tiff">
+           <mets:FLocat LOCTYPE="URL"
+                         xlink:href="http://diglib.princeton.edu/images/master/pudl0001/4609990/332/00000001.tif"/>
+        </mets:file>
+        <mets:file ID="id1" USE="deliverable" MIMETYPE="image/jpx">
+           <mets:FLocat LOCTYPE="URL"
+                         xlink:href="http://diglib.princeton.edu/images/deliverable/pudl0001/4609990/332/00000001.jpf"/>
+        </mets:file>
+        <mets:file ID="ir1" USE="reference" MIMETYPE="image/jpg">
+           <mets:FLocat LOCTYPE="URL"
+                         xlink:href="http://diglib.princeton.edu/images/reference/pudl0001/4609990/332/00000001.jpg"/>
+        </mets:file>
+        <mets:file ID="it1" USE="thumbnail" MIMETYPE="image/png">
+           <mets:FLocat LOCTYPE="URL"
+                         xlink:href="http://diglib.princeton.edu/images/thumbnail/pudl0001/4609990/332/00000001.png"/>
+        </mets:file>
+     </mets:fileGrp>
+  </mets:fileSec>
+  <mets:structMap TYPE="RelatedObjects">
+     <mets:div DMDID="object.dmd">
+        <mets:div ID="isAggregatedBy" TYPE="UnorderedList">
+           <mets:div TYPE="Static">
+              <mets:mptr LOCTYPE="URL" xlink:href="http://diglib.princeton.edu/mdata/pudl0001.ead"/>
+           </mets:div>
+        </mets:div>
+        <mets:div ID="aggregates" TYPE="OrderedList">
+           <mets:div LABEL="modern upper cover" ORDER="1">
+              <mets:mptr LOCTYPE="URL"
+                          xlink:href="http://diglib.princeton.edu/images/pudl0001/4609990/332/00000001.mets"/>
+           </mets:div>
+           <mets:div LABEL="pastedown" ORDER="2">
+              <mets:mptr LOCTYPE="URL"
+                          xlink:href="http://diglib.princeton.edu/images/pudl0001/4609990/332/00000002.mets"/>
+           </mets:div>
+           <mets:div LABEL="leaf II, 177 recto" ORDER="3">
+              <mets:mptr LOCTYPE="URL"
+                          xlink:href="http://diglib.princeton.edu/images/pudl0001/4609990/332/00000003.mets"/>
+           </mets:div>
+           <mets:div LABEL="leaf II, 177 verso" ORDER="4">
+              <mets:mptr LOCTYPE="URL"
+                          xlink:href="http://diglib.princeton.edu/images/pudl0001/4609990/332/00000004.mets"/>
+           </mets:div>
+           <mets:div LABEL="leaf II, 178 recto" ORDER="5">
+              <mets:mptr LOCTYPE="URL"
+                          xlink:href="http://diglib.princeton.edu/images/pudl0001/4609990/332/00000005.mets"/>
+           </mets:div>
+           <mets:div LABEL="leaf II, 178 verso" ORDER="6">
+              <mets:mptr LOCTYPE="URL"
+                          xlink:href="http://diglib.princeton.edu/images/pudl0001/4609990/332/00000006.mets"/>
+           </mets:div>
+           <mets:div LABEL="leaf II, 179 recto" ORDER="7">
+              <mets:mptr LOCTYPE="URL"
+                          xlink:href="http://diglib.princeton.edu/images/pudl0001/4609990/332/00000007.mets"/>
+           </mets:div>
+           <mets:div LABEL="leaf II, 179 verso" ORDER="8">
+              <mets:mptr LOCTYPE="URL"
+                          xlink:href="http://diglib.princeton.edu/images/pudl0001/4609990/332/00000008.mets"/>
+           </mets:div>
+           <mets:div LABEL="leaf II, 180 recto" ORDER="9">
+              <mets:mptr LOCTYPE="URL"
+                          xlink:href="http://diglib.princeton.edu/images/pudl0001/4609990/332/00000009.mets"/>
+           </mets:div>
+           <mets:div LABEL="leaf II, 180 verso" ORDER="10">
+              <mets:mptr LOCTYPE="URL"
+                          xlink:href="http://diglib.princeton.edu/images/pudl0001/4609990/332/00000010.mets"/>
+           </mets:div>
+           <mets:div LABEL="leaf II, 181 recto" ORDER="11">
+              <mets:mptr LOCTYPE="URL"
+                          xlink:href="http://diglib.princeton.edu/images/pudl0001/4609990/332/00000011.mets"/>
+           </mets:div>
+           <mets:div LABEL="leaf II, 181 verso" ORDER="12">
+              <mets:mptr LOCTYPE="URL"
+                          xlink:href="http://diglib.princeton.edu/images/pudl0001/4609990/332/00000012.mets"/>
+           </mets:div>
+           <mets:div LABEL="leaf II, 182 recto" ORDER="13">
+              <mets:mptr LOCTYPE="URL"
+                          xlink:href="http://diglib.princeton.edu/images/pudl0001/4609990/332/00000013.mets"/>
+           </mets:div>
+           <mets:div LABEL="leaf II, 182 verso" ORDER="14">
+              <mets:mptr LOCTYPE="URL"
+                          xlink:href="http://diglib.princeton.edu/images/pudl0001/4609990/332/00000014.mets"/>
+           </mets:div>
+           <mets:div LABEL="pastedown" ORDER="15">
+              <mets:mptr LOCTYPE="URL"
+                          xlink:href="http://diglib.princeton.edu/images/pudl0001/4609990/332/00000015.mets"/>
+           </mets:div>
+           <mets:div LABEL="modern lower cover" ORDER="16">
+              <mets:mptr LOCTYPE="URL"
+                          xlink:href="http://diglib.princeton.edu/images/pudl0001/4609990/332/00000016.mets"/>
+           </mets:div>
+        </mets:div>
+     </mets:div>
+  </mets:structMap>
+  <mets:structMap TYPE="Physical">
+     <mets:div TYPE="BoundFragment" DMDID="object.dmd">
+        <mets:div TYPE="UpperCover" LABEL="upper cover">
+           <mets:div LABEL="outside" TYPE="CoverOutside" ORDER="1">
+              <mets:mptr LOCTYPE="URL"
+                          xlink:href="http://diglib.princeton.edu/images/pudl0001/4609990/332/00000001.mets"/>
+           </mets:div>
+           <mets:div LABEL="pastedown" TYPE="Pastedown" ORDER="2">
+              <mets:mptr LOCTYPE="URL"
+                          xlink:href="http://diglib.princeton.edu/images/pudl0001/4609990/332/00000002.mets"/>
+           </mets:div>
+        </mets:div>
+        <mets:div TYPE="Leaf" LABEL="leaf II, 177">
+           <mets:div LABEL="recto" TYPE="Page" ORDER="3">
+              <mets:mptr LOCTYPE="URL"
+                          xlink:href="http://diglib.princeton.edu/images/pudl0001/4609990/332/00000003.mets"/>
+           </mets:div>
+           <mets:div LABEL="verso" TYPE="Page" ORDER="4">
+              <mets:mptr LOCTYPE="URL"
+                          xlink:href="http://diglib.princeton.edu/images/pudl0001/4609990/332/00000004.mets"/>
+           </mets:div>
+        </mets:div>
+        <mets:div TYPE="Leaf" LABEL="leaf II, 178">
+           <mets:div LABEL="recto" TYPE="Page" ORDER="5">
+              <mets:mptr LOCTYPE="URL"
+                          xlink:href="http://diglib.princeton.edu/images/pudl0001/4609990/332/00000005.mets"/>
+           </mets:div>
+           <mets:div LABEL="verso" TYPE="Page" ORDER="6">
+              <mets:mptr LOCTYPE="URL"
+                          xlink:href="http://diglib.princeton.edu/images/pudl0001/4609990/332/00000006.mets"/>
+           </mets:div>
+        </mets:div>
+        <mets:div TYPE="Leaf" LABEL="leaf II, 179">
+           <mets:div LABEL="recto" TYPE="Page" ORDER="7">
+              <mets:mptr LOCTYPE="URL"
+                          xlink:href="http://diglib.princeton.edu/images/pudl0001/4609990/332/00000007.mets"/>
+           </mets:div>
+           <mets:div LABEL="verso" TYPE="Page" ORDER="8">
+              <mets:mptr LOCTYPE="URL"
+                          xlink:href="http://diglib.princeton.edu/images/pudl0001/4609990/332/00000008.mets"/>
+           </mets:div>
+        </mets:div>
+        <mets:div TYPE="Leaf" LABEL="leaf II, 180">
+           <mets:div LABEL="recto" TYPE="Page" ORDER="9">
+              <mets:mptr LOCTYPE="URL"
+                          xlink:href="http://diglib.princeton.edu/images/pudl0001/4609990/332/00000009.mets"/>
+           </mets:div>
+           <mets:div LABEL="verso" TYPE="Page" ORDER="10">
+              <mets:mptr LOCTYPE="URL"
+                          xlink:href="http://diglib.princeton.edu/images/pudl0001/4609990/332/00000010.mets"/>
+           </mets:div>
+        </mets:div>
+        <mets:div TYPE="Leaf" LABEL="leaf II, 181">
+           <mets:div LABEL="recto" TYPE="Page" ORDER="11">
+              <mets:mptr LOCTYPE="URL"
+                          xlink:href="http://diglib.princeton.edu/images/pudl0001/4609990/332/00000011.mets"/>
+           </mets:div>
+           <mets:div LABEL="verso" TYPE="Page" ORDER="12">
+              <mets:mptr LOCTYPE="URL"
+                          xlink:href="http://diglib.princeton.edu/images/pudl0001/4609990/332/00000012.mets"/>
+           </mets:div>
+        </mets:div>
+        <mets:div TYPE="Leaf" LABEL="leaf II, 182">
+           <mets:div LABEL="recto" TYPE="Page" ORDER="13">
+              <mets:mptr LOCTYPE="URL"
+                          xlink:href="http://diglib.princeton.edu/images/pudl0001/4609990/332/00000013.mets"/>
+           </mets:div>
+           <mets:div LABEL="verso" TYPE="Page" ORDER="14">
+              <mets:mptr LOCTYPE="URL"
+                          xlink:href="http://diglib.princeton.edu/images/pudl0001/4609990/332/00000014.mets"/>
+           </mets:div>
+        </mets:div>
+        <mets:div TYPE="LowerCover" LABEL="lower cover">
+           <mets:div LABEL="pastedown" TYPE="Pastedown" ORDER="15">
+              <mets:mptr LOCTYPE="URL"
+                          xlink:href="http://diglib.princeton.edu/images/pudl0001/4609990/332/00000015.mets"/>
+           </mets:div>
+           <mets:div LABEL="outside" TYPE="CoverOutside" ORDER="16">
+              <mets:mptr LOCTYPE="URL"
+                          xlink:href="http://diglib.princeton.edu/images/pudl0001/4609990/332/00000016.mets"/>
+           </mets:div>
+        </mets:div>
+     </mets:div>
+  </mets:structMap>
+</mets:mets>

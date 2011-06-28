@@ -1,0 +1,52 @@
+<configuration>
+
+   <appender name="DEBUG_STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+      <target>System.out</target>
+      <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+         <level>DEBUG</level>
+      </filter>
+      <encoder>
+         <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{0} - %msg%n</pattern>
+      </encoder>
+   </appender>
+
+   <appender name="STDERR" class="ch.qos.logback.core.ConsoleAppender">
+      <target>System.err</target>
+      <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+         <level>WARN</level>
+      </filter>
+      <encoder>
+         <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{0} - %msg%n</pattern>
+      </encoder>
+   </appender>
+
+   <appender name="PRODUCTION_STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+      <target>System.out</target>
+      <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+         <level>INFO</level>
+      </filter>
+      <encoder>
+         <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{0} - %msg%n</pattern>
+      </encoder>
+   </appender>
+
+   <appender name="PRODUCTION_LOG" class="ch.qos.logback.core.FileAppender">
+      <file>logs/arkifier.log</file>
+      <append>true</append>
+      <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+         <level>INFO</level>
+      </filter>
+      <encoder>
+         <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{0} - %msg%n</pattern>
+      </encoder>
+   </appender>
+
+   <root>
+      <!-- uncomment for debugging -->
+      <!--<appender-ref ref="DEBUG_STDOUT"/> -->
+      <!-- might want to comment out the following two for debugging -->
+      <appender-ref ref="PRODUCTION_LOG"/>
+      <appender-ref ref="PRODUCTION_STDOUT"/>
+      <appender-ref ref="STDERR"/>
+   </root>
+</configuration>
