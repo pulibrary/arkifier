@@ -5,7 +5,7 @@ target
 
 # Eclipse stuff #
 #################
-# .project
+.project
 # .classpath
 .settings
 
