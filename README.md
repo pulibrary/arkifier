@@ -1,6 +1,8 @@
 Arkifier
 =======
 
+An overwrought tool for minitng NOIDs and binding ARKs for the PUDL.
+
 To Build
 ---------
  1. Check out the latest TAG from SVN. 
