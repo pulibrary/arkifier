@@ -5,9 +5,13 @@ package edu.princeton.diglib.arkifier;
 
 import javax.xml.ws.http.HTTPException;
 
-import com.sun.jersey.api.client.Client;
-import com.sun.jersey.api.client.ClientResponse;
-import com.sun.jersey.api.client.WebResource;
+import javax.ws.rs.client.Client;
+import javax.ws.rs.client.ClientBuilder;
+import javax.ws.rs.client.WebTarget;
+import javax.ws.rs.client.Invocation;
+import javax.ws.rs.core.Response;
+import javax.ws.rs.core.MediaType;
+
 
 /**
  * Cheap wrapper for a NOID/ARK service.
@@ -18,42 +22,65 @@ import com.sun.jersey.api.client.WebResource;
 public class ARKService {
 
     private static Client client;
-    private static WebResource mintResource;
-    private static WebResource bindResource;
+    private static WebTarget mintResource;
     private String uri;
     private String naan;
 
     public ARKService(String uri, String naan) {
         this.uri = uri;
         this.naan = naan;
-        client = Client.create();
+        client = ClientBuilder.newClient();
     }
 
+    /**
+     * Mint a new ARK.
+     * 
+     * @returns The NOID identifier portion of the ARK
+     */
+    
     public String mint() throws HTTPException {
+    	
+    	// If the minting resource has not already been instantiated, then make a static resource that
+    	//  can be reused
         if (mintResource == null) {
-            String url = this.uri + "?mint+1";
-            mintResource = client.resource(url);
+        	String url = this.uri + "?mint+1";
+            mintResource = client.target(url);
         }
+        
         String noid;
 
-        ClientResponse mintResponse;
-        mintResponse = mintResource.accept("text/plain").get(ClientResponse.class);
+        Invocation.Builder invocationBuilder = mintResource.request(MediaType.TEXT_PLAIN_TYPE);
+        
+        Response mintResponse;
+        mintResponse = invocationBuilder.get();
+        
         int status = mintResponse.getStatus();
-        String body = mintResponse.getEntity(String.class);
+        String body = mintResponse.readEntity(String.class);
         if (status != 200) {
             throw new HTTPException(status);
         }
         
         noid = body.split("/")[1].trim();
         mintResponse.close();
+        
         return noid;
     }
 
+    /**
+     * Bind the given NOID identifier to the given URL
+     * 
+     * @returns true if bind was successful
+     * @throws exception if bind was unsuccessful
+     */
+    
     public boolean bind(String noid, String target) throws HTTPException {
         String url = this.uri + "?bind+set+" + naan + "/" + noid + "+location+" + target;
-        bindResource = client.resource(url);
-        ClientResponse bindResponse;
-        bindResponse = bindResource.accept("text/plain").get(ClientResponse.class);
+        WebTarget bindResource = client.target(url);
+        
+        Invocation.Builder invocationBuilder = mintResource.request(MediaType.TEXT_PLAIN_TYPE);
+        
+        Response bindResponse;
+        bindResponse = invocationBuilder.get();
 
         int status = bindResponse.getStatus();
         bindResponse.close();
