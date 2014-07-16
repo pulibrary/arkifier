@@ -199,7 +199,7 @@ public class Arkifier {
                         logger.debug("Minted new NOID for " + currentRelative);
                     } catch (HTTPException ex) {
                         String msg;
-                        msg = "Unable to either bind ARK. HTTP status: " + ex.getStatusCode();
+                        msg = "Unable to bind ARK. HTTP status: " + ex.getStatusCode();
                         logger.error(msg);
                         System.exit(-1);
                     }

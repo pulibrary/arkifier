@@ -40,5 +40,11 @@ public class EZIDARKServiceTest  extends TestCase {
     	assertTrue(noid.startsWith("fk4"));
     }
 
+    public void testBind() {
+    	String noid = "fk4zc81p9m";
+    	boolean bindOK = arkService.bind(noid, "http://pudl.princeton.edu");
+    	assertTrue(bindOK);
+//    	System.out.println();
+    }
     
 }
