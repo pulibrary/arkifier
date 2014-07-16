@@ -40,9 +40,12 @@ public class Arkifier {
     private boolean mint = false;
     private boolean bind = false;
     private boolean simulate = false;
-    private ARKService arkService;
-    private static String uri;
-    private static String naan;
+    private EZIDARKService arkService;
+//    private static String uri;
+//    private static String naan;
+//    private static String user;
+//    private static String password;
+//    private static String shoulder;
     private static String pudlObjectUri;
     private static Builder bob = null;
 
@@ -52,22 +55,41 @@ public class Arkifier {
      * @param dir
      */
     public Arkifier() {
-        Properties props = new Properties();
+    	String propsFileName = "arkifier.properties";
+    	initialize(propsFileName);
+    }
+    
+    public Arkifier(boolean test) {
+    	String propsFileName;
+    	if (test == true) {
+    		propsFileName = "arkifier.test.properties";
+    	} else {
+    		propsFileName = "arkifier.properties";	
+    	}
+    	initialize(propsFileName);
+    }
+    
+    private void initialize(String propsFileName) {
+    	Properties props = new Properties();
         try {
             InputStream propsStream;
             ClassLoader cl;
             cl = Arkifier.class.getClassLoader();
-            propsStream = cl.getResourceAsStream("arkifier.properties");
+            propsStream = cl.getResourceAsStream(propsFileName);
             props.load(propsStream);
-            uri = props.getProperty("Arkifier.uri");
-            naan = props.getProperty("Arkifier.naan");
-            pudlObjectUri = props.getProperty("Arkifier.pudlObjectUri");
-            this.arkService = new ARKService(uri, naan);
+            String uri = props.getProperty("Arkifier.uri");
+            String naan = props.getProperty("Arkifier.naan");
+            String user = props.getProperty("Arkifier.user");
+            String password = props.getProperty("Arkifier.password");
+            String shoulder = props.getProperty("Arkifier.shoulder", "");
+            this.pudlObjectUri = props.getProperty("Arkifier.pudlObjectUri");
+            this.arkService = new EZIDARKService(uri, naan, user, password, shoulder);
         } catch (IOException e) {
             e.printStackTrace();
         }
         logger.debug("Initialized Arkifier");
-    }
+	}
+    
 
     /**
      * Should we mint? False by default.
@@ -173,7 +195,7 @@ public class Arkifier {
 
                     // mint
                     try {
-                        noid = arkService.mint();
+                        noid = arkService.mint("");
                         logger.debug("Minted new NOID for " + currentRelative);
                     } catch (HTTPException ex) {
                         String msg;

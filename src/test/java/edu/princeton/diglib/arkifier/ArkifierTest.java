@@ -35,7 +35,7 @@ public class ArkifierTest extends TestCase {
     }
 
     public ArkifierTest() {
-        arkifier = new Arkifier();
+        arkifier = new Arkifier(true);
         arkifier.setSimulate(true); // IMPORTANT!!
 
         ClassLoader cl = Arkifier.class.getClassLoader();
